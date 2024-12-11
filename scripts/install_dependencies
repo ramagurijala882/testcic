@@ -1,0 +1,6 @@
+#!/bin/bash
+# Install dependencies like httpd
+yum install -y httpd
+
+# Run the install_codedeploy_agent script
+bash "$(dirname "$0")/install_codedeploy_agent.sh"
