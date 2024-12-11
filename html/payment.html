@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Summer Icecreams</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="menu">
+        <h2><a href="./html/payment.html">admin</a></h2>
+        
+    </div>
+
+    <header class="header">
+        <img src="../images/IcPlogo.jpeg" alt="Logo" class="logo">
+        <h1><a href="../index.html" class="header-title">Cool Summer Icecreams</a></h1>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar left-sidebar">
+            <h2>Left Sidebar</h2> 
+            <p>Content for left sidebar.</p>
+            <img src="../images/discounts/apply_discount.gif" alt="discount"> <br>
+            <img src="../images/poster.png" alt="Sidebar Image" class="sidebar-image">
+        </aside>
+
+        <main class="main-content">
+            <div class="container1">
+                <div class="box2">
+                    <h1>Enter Order ID</h1>
+                    <input type="text" id="order-id" placeholder="Enter Order ID">
+                    <button class="add-to-cart" onclick="fetchOrderDetails()">Fetch Order Details</button>
+                </div>  
+                <div class="box2">
+                    <div id="order-info"></div> 
+
+                    <!-- Promo Code Section -->
+                    <div id="promo-section" style="display:none;">
+                        <label for="promo-code">Enter Promo Code (Optional):</label>
+                        <input type="text" id="promo-code" placeholder="Enter Promo Code">          
+                        <button class="add-to-cart" onclick="applyPromoCode()">Apply</button>
+                        <button class="add-to-cart" onclick="cancelPromoCode()">Cancel</button>
+                    </div> 
+
+                    <!-- Payment Section -->
+                    <div id="payment-section" style="display:none;">
+                        <h2>Enter Payment Amount</h2>
+                        <input type="number" id="payment-amount" placeholder="Enter Payment Amount">
+                        <button class="add-to-cart" onclick="makePayment()">Pay</button> 
+                    </div>
+
+                    <div id="payment-info" style="display:none;">
+                        <p>Change: $<span id="change"></span></p>
+                        <p>Remaining Balance: $<span id="remaining-balance"></span></p>
+                        <p>Status: <span id="payment-status"></span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Correct path to order.js -->
+    <script src="../javascript/order.js"></script>
+
+    <footer>
+        <h1>&copy; 2024 Cool Summer Icecreams. All rights reserved.</h1>
+    </footer>
+
+</body>
+</html>
